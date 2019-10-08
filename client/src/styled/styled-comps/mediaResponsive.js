@@ -23,7 +23,7 @@ export default {
       lg: '1199.98px',
       xl: '1199.99px',
       big: '3000px'
-    }
+    }   
     return `@media screen and (max-width: ${sizes.size2}) and (min-width: ${sizes.size1})`;
   }
 }
