@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/styles';
-import styles from './Header.style';
+// import { withStyles } from '@material-ui/styles';
+// import styles from './Header.style';
 class Header extends Component {
-  constructor(props) {
-    super(props)
-  }
+  
   render() {
-    console.log(props.classes);
+    // console.log(props.classes);
     return (
-      <div className={classes.root}>
-        
+      <div>
+        I am header
       </div>
     );
   }
 }
 
-export default withStyles(styles)(Header);
+export default Header;

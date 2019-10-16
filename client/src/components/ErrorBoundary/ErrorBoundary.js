@@ -1,5 +1,8 @@
+//
 import React, { Component } from 'react';
-import { ErrorImageContainer, ErrorImageOverlay, ErrorImageText } from "./ErrorBoundaryStyles";
+import { ErrorImageContainer, ErrorImageOverlay, ErrorImageText } from "./ErrorBoundary.style";
+
+
 class ErrorBoundary extends Component {
   state = { hasErrored: false };
   // its react lifeCycle method
