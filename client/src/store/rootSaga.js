@@ -1,12 +1,10 @@
-import { all, call } from "redux-saga/effects";
-import { userSagas } from './user/userSaga';
-import { cartSagas } from "./cart/cartSagas";
-import { shopSagas } from "./shop/shopSagas";
+// import { all, call } from "redux-saga/effects";
+// import { userSagas } from './user/userSagas';
+// import { cartSagas } from "./cart/cartSagas";
 
-export default function* rootSaga() {
-  yield all([
-    call(shopSagas),
-    call(userSagas),
-    call(cartSagas),
-  ])
-}
+// export default function* rootSaga() {
+//   yield all([
+//     call(userSagas),
+//     call(cartSagas),
+//   ])
+// }
