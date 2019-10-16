@@ -1,11 +1,14 @@
+//
+import { LandingPageContainer } from './LandingPage.style';
+//
 import React, { Component } from 'react';
 
 class LandingPage extends Component {
   render() {
     return (
-      <div>
-        i am landing page
-      </div>
+      <LandingPageContainer>
+        i am landing page;
+      </LandingPageContainer>
     );
   }
 }

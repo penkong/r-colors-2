@@ -1,5 +1,5 @@
 //
-import "./styled/scss/App.scss";
+import './styled/scss/App.scss';
 import React, { lazy, Suspense } from "react";
 import { Switch, Route,  } from "react-router-dom";
 // Redirect from react-router-dom
@@ -11,9 +11,13 @@ const LandingPage = lazy(() => import('./pages/LandingPage/LandingPage'));
 const SignPage = lazy(() => import('./pages/SignPage/SignPage'));
 //
 const App = () => {
+  const loadHeader = () =>
+    (window.location.pathname === '/sign') 
+    ? null 
+    : <Header/>
   return (
     <div>
-      <Header/>
+      {loadHeader()}
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={(<Spinner/>)}>
