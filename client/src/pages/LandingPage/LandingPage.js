@@ -1,6 +1,12 @@
 // style
-import { LandingPageContainer, BigButton, TextBoxContainer } from './LandingPage.style';
-import { Button, ButtonContainer, HeadText } from '../../components/HeadRow/HeadRow.style.js';
+import {
+  LandingPageContainer,
+  TextBoxContainer,
+  ButtonContainer,
+  Button,
+  BigButton,
+  HeadText
+} from './LandingPage.style';
 //
 import React, { Component } from 'react';
 import TablePrice from '../../components/TablePrice/TablePrice';

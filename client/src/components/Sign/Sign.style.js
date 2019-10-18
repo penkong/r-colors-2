@@ -1,13 +1,14 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { centerOf } from '../../styled/styled-comps/mixin';
 
 export const CardSign = styled.div`
   ${centerOf};
   width: 90%;
   height: 70vh;
-  background-color: red;
+  background-color: white;
   border: none;
   border-radius: 3px;
+  margin-top: 1rem;
   @media screen and (min-width: 575px){
     width: 60%;
     margin-top: 3rem;

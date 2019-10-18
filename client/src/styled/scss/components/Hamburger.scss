@@ -1,12 +1,17 @@
+$darkMainColor: '#494ca2';
+$mainColor: '#8186d5';
+$lightColor: '#c6cbef';
+
+
 .navigation {
     &__checkbox {
         display: none;
     }
     @media screen and (min-width: 991px){
-      margin-right: 5rem;
+        margin-right: 5rem;
     }
     &__button {
-        background-color: rgb(0, 136, 136);
+        background-color: #494ca2;
         margin-right: 0.7rem;
         @media screen and (min-width: 991px){
             margin-right: 2rem;
@@ -17,6 +22,7 @@
         top: 0.8rem;
         right: 1rem;
         border-radius: 50%;
+        border: 1px solid white;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba(black, .1);
         text-align: center;
@@ -34,7 +40,7 @@
         position: fixed;
         top: 0.9rem;
         right: 1.05rem;
-        background-image: radial-gradient(rgb(0, 136, 136), rgb(3, 129, 91));
+        background-image: radial-gradient(#494ca2, #494ca2);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
         //transform: scale(80);

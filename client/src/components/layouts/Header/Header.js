@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+// style
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import {  darkMainColor } from '../../../styled/styled-comps/constants';
 //
+import React, { Component } from 'react';
 import Hamburger from './../../Hamburger/Hamburger';
 import { HeaderContainer, LogoHeader } from './Header.style';
 //
@@ -18,7 +20,7 @@ class Header extends Component {
           <FontAwesomeIcon 
             icon={faPlayCircle} 
             size="3x" 
-            style={{ color: 'rgb(0, 136, 136)', marginRight: '1.5rem', cursor: 'pointer'}}
+            style={{ color: 'white', marginRight: '1rem', cursor: 'pointer'}}
           />
         </div>
         <Hamburger/>
