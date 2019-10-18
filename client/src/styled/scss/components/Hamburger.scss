@@ -2,10 +2,15 @@
     &__checkbox {
         display: none;
     }
-    
+    @media screen and (min-width: 991px){
+      margin-right: 5rem;
+    }
     &__button {
         background-color: rgb(0, 136, 136);
         margin-right: 0.7rem;
+        @media screen and (min-width: 991px){
+            margin-right: 2rem;
+        }
         height: 3rem;
         width: 3rem;
         position: fixed;
@@ -21,6 +26,9 @@
     &__background {
         height: 2.8rem;
         margin-right: 0.7rem;
+        @media screen and (min-width: 991px){
+            margin-right: 2rem;
+        }
         width: 2.8rem;
         border-radius: 45%;
         position: fixed;
@@ -85,6 +93,12 @@
     //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
         transform: scale(20);
+        @media screen and (min-width: 575px){
+            transform: scale(30);
+        }
+        @media screen and (min-width: 767px){
+            transform: scale(40);
+        }
     }
 
     &__checkbox:checked ~ &__nav {

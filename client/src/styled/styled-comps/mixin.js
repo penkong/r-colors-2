@@ -14,3 +14,14 @@ export const flexCol = css `
 `;
 
 
+export const centerOf = css `
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+`;
+
+

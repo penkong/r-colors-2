@@ -18,7 +18,7 @@ class Header extends Component {
           <FontAwesomeIcon 
             icon={faPlayCircle} 
             size="3x" 
-            style={{ color: 'green', marginRight: '1.5rem', cursor: 'pointer'}}
+            style={{ color: 'rgb(0, 136, 136)', marginRight: '1.5rem', cursor: 'pointer'}}
           />
         </div>
         <Hamburger/>

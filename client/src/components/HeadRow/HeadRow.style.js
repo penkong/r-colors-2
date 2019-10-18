@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { flexRow, flexCol } from '../../styled/styled-comps/mixin';
+import { flexRow, flexCol, centerOf } from '../../styled/styled-comps/mixin';
 
 
 export const ButtonContainer = styled.div`
@@ -29,5 +29,33 @@ export const Button = styled.button`
   margin-bottom: 2rem;
   margin-top: 2rem;
   margin-left: auto;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  @media screen and (min-width: 500px){
+    margin-right: 6rem;
+  }
+  @media screen and (min-width: 700px){
+    margin-right: 10rem;
+    width: 12rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
+  -moz-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
+  box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
+  span {
+    ${centerOf}
+    color: white;
+    font-size: 1rem;
+  }
+  :hover {
+    transform: scale(1.02);
+    background-color: orange;
+  }
+  :active {
+    background-color: orange;
+    transform: scale(0.98);
+  }
+  
 `;

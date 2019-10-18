@@ -1,20 +1,21 @@
 //
-const sizes = {
-  xs: '350px',
-  xm: '575.98px',
-  sm: '767.98px',
-  md: '991.98px',
-  lg: '1199.98px',
-  xl: '1199.99px',
-  big: '3000px'
-}
+
 export default {
   up(size) {
+    const sizes = {
+      xs: '350px',
+      xm: '575.98px',
+      sm: '767.98px',
+      md: '991.98px',
+      lg: '1199.98px',
+      xl: '1199.99px',
+      big: '3000px'
+    }
     return `@media screen and (min-width: ${sizes.size})`;
   },
-  between(size1,size2) {   
-    return `@media screen and (min-width: ${sizes.size1}) and (max-width: ${sizes.size2})`;
-  }
+  // between(size1,size2) {   
+  //   return `@media screen and (min-width: ${sizes.size1}) and (max-width: ${sizes.size2})`;
+  // }
 }
 
 

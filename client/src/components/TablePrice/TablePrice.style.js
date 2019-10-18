@@ -1,16 +1,17 @@
 import styled from 'styled-components';
-
+import responsive from '../../styled/styled-comps/responsive';
 
 
 export const Table = styled.table`
   width: 90%;
   height: 22rem;
-  background-color: lightcyan;
+  background-color: white;
   font-size: 0.8rem;
   margin: 0 auto;
   text-align: left;
-  td {
-    margin: 0.3rem 0;
+  @media screen and (min-width: 575px){
+    background-color: red;
+
   }
 `;
 

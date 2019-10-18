@@ -21,6 +21,12 @@ export const HeaderContainer = styled.div`
     ${flexRow}
     width: 60%;
     justify-content: space-between;
+    @media screen and (min-width: 500px){
+      width: 45%;
+    }
+    @media screen and (min-width: 991px){
+      width: 30%;
+    }
   }
 `;
 
