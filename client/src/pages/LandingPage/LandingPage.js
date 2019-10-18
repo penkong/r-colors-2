@@ -12,6 +12,13 @@ import React, { Component } from 'react';
 import TablePrice from '../../components/TablePrice/TablePrice';
 
 class LandingPage extends Component {
+  state = {
+    width: null
+  }
+  componentDidMount() {
+    const width = window.innerWidth;
+    this.setState({ width : width });
+  }
   render() {
     return (
       <LandingPageContainer>
@@ -33,7 +40,7 @@ class LandingPage extends Component {
         <ButtonContainer>
           <BigButton>
             <span>
-              and so much more ... Click!
+              And so much more ... Click!
             </span>
           </BigButton>
         </ButtonContainer>

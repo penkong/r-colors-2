@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import responsive from '../../styled/styled-comps/responsive';
-
+import { tableBg } from '../../styled/styled-comps/constants';
 
 export const Table = styled.table`
   width: 90%;
@@ -10,8 +9,6 @@ export const Table = styled.table`
   margin: 0 auto;
   text-align: left;
   @media screen and (min-width: 575px){
-    background-color: red;
-
   }
 `;
 

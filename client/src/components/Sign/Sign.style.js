@@ -20,3 +20,17 @@ export const CardSign = styled.div`
     width: 30%;
   }
 `;
+
+export const ImgContainer = styled.div`
+  height: 4rem;
+  margin: 1rem auto 0;
+  width: 90%;
+  text-align: center;
+  img {
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+  }
+`;
