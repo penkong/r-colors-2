@@ -11,13 +11,13 @@ const LandingPage = lazy(() => import('./pages/LandingPage/LandingPage'));
 const SignPage = lazy(() => import('./pages/SignPage/SignPage'));
 //
 const App = () => {
-  const loadHeader = () =>
-    (window.location.pathname === '/sign') 
-    ? null 
-    : <Header/>
+  // const loadHeader = () =>
+  //   (window.location.pathname === '/sign') 
+  //   ? null 
+  //   : <Header/>
   return (
     <div>
-      {loadHeader()}
+      <Header/>
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={(<Spinner/>)}>
