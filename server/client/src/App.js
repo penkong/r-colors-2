@@ -1,8 +1,8 @@
 //
 import './styled/scss/App.scss';
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense , useEffect } from "react";
 import { Switch, Route , Redirect  } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 // Redirect from react-router-dom
 import Header from "./components/layouts/Header/Header";
 import Spinner from "./components/Spinner/Spinner";
@@ -13,7 +13,10 @@ const SignPage = lazy(() => import('./pages/SignPage/SignPage'));
 const DashBoard = lazy(() => import('./pages/DashBoard/DashBoard'));
 //
 const App = () => {
-  const token = useSelector(state => state.token);
+  const token = useSelector(state => state.token); 
+  useEffect(() => {
+    useDispatch(() => fetchUser());
+  }, [token])
   return (
     <div>
       <Header/>
