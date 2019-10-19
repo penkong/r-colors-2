@@ -8,10 +8,10 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys')
 
 // ------------------- register DB ---------------------
-mongoose.connect(keys.mongoURI, {
-  useNewUrlParser: true
-});
-
+mongoose
+  .connect(keys.mongoURI, { useNewUrlParser: true , useUnifiedTopology: true })
+  .then(() => console.log('mongo connected!'))
+  .catch(err => console.log(err));
 
 // ------------------ App Initialize --------------------
 const app = express();
@@ -25,10 +25,9 @@ app.use(bodyParser.urlencoded({
 }));
 
 // ------------------- Routes ---------------------------
-// landing route
-app.get('/', (req, res) => res.send('index from landing page'));
-// ci-routes
-require('./routes/registerUser')(app);
+
+// sign / login -routes
+require('./routes/api/auth')(app);
 
 // ------------------- Routes prod -----------------------
 //route for let react-router make decision
