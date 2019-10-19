@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled , { css } from 'styled-components';
 import {
   centerOf,
   flexRow,
@@ -7,12 +7,13 @@ import {
 import {
   orangeButton,
   hoverButton,
-  lightColor,
   coolBlue,
   coolBlueHover,
   mainBgColor,
   coolGreen
 } from '../../styled/styled-comps/constants';
+
+
 
 export const LandingPageContainer = styled.div `
   min-height: calc(100vh - 4.5rem);
@@ -24,42 +25,6 @@ export const LandingPageContainer = styled.div `
   background-size: cover;
   margin: 0 auto;
   position: relative;
-`;
-
-export const TextBoxContainer = styled.div`
-  width: 90%;
-  height: 4rem;
-  background-color: ${ coolGreen };
-  margin: 0.5rem auto 0rem;
-  border: none;
-  border-radius: 4px;
-
-`;
-
-export const BigButton = styled.button `
-  width: 100%;
-  cursor: pointer;
-  margin: 0.5rem auto;
-  border: none;
-  background-color: ${coolBlue};
-  color: white;
-  font-weight: 700;
-  height: 3rem;
-  border-radius: 4px;
-  text-align: center;
-  transition: all 0.4s ease-in-out;
-  -webkit-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.26);
-  -moz-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.26);
-  box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.26);
-  :hover {
-    transform: scale(1.02);
-    background-color: ${coolBlueHover};
-  }
-  :active {
-    transform: scale(0.98);
-  }
-  color: white;
-  font-size: 1rem;
 `;
 
 export const ButtonContainer = styled.div `
@@ -90,6 +55,11 @@ export const Button = styled.button `
   margin-left: auto;
   margin-right: 1.8rem;
   cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
+  -moz-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
+  box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
   @media screen and (min-width: 500px){
     margin-right: 6rem;
   }
@@ -99,15 +69,13 @@ export const Button = styled.button `
     height: 3rem;
     margin-bottom: 1rem;
   }
-  position: relative;
-  transition: all 0.4s ease-in-out;
-  -webkit-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
-  -moz-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
-  box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.16);
-  span {
+
+  a {
     ${centerOf}
     color: white;
     font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 0.9px;
   }
   :hover {
     transform: scale(1.02);
@@ -117,5 +85,47 @@ export const Button = styled.button `
     background-color: orange;
     transform: scale(0.98);
   }
-  
 `;
+
+export const TextBoxContainer = styled.div`
+  width: 90%;
+  height: 4rem;
+  background-color: ${ coolGreen };
+  margin: 0.5rem auto 0rem;
+  border: none;
+  border-radius: 4px;
+
+`;
+
+export const BigButton = styled.button `
+  width: 100%;
+  cursor: pointer;
+  margin: 0.5rem auto;
+  border: none;
+  background-color: ${coolBlue};
+  color: white;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  -webkit-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.26);
+  -moz-box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.26);
+  box-shadow: 0px 4px 4px 1px rgba(122,121,122,0.26);
+  a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  :hover {
+    transform: scale(1.02);
+    background-color: ${coolBlueHover};
+  }
+  :active {
+    transform: scale(0.98);
+  }
+`;
+
+
+

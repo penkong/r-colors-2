@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { tableBg } from '../../styled/styled-comps/constants';
+// import { tableBg } from '../../styled/styled-comps/constants';
 
 export const Table = styled.table`
   width: 90%;

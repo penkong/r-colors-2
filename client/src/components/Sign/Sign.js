@@ -13,7 +13,7 @@ class Sign extends Component {
     return (
       <CardSign>
         <ImgContainer>
-          <img src=""/>
+          <img src="" alt="logo"/>
         </ImgContainer>
         <FormInput label='user name'>
           <FontAwesomeIcon 

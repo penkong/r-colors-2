@@ -74,6 +74,7 @@ $lightColor: '#c6cbef';
 
     &__link {
         // visibility: hidden;
+        cursor: pointer;
         &:link,
         &:visited {
             display: inline-block;

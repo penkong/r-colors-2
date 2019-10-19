@@ -9,15 +9,17 @@ import {
 } from './LandingPage.style';
 //
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import TablePrice from '../../components/TablePrice/TablePrice';
 
 class LandingPage extends Component {
   state = {
     width: null
   }
-  componentDidMount() {
+  onWidth = () => {
     const width = window.innerWidth;
     this.setState({ width : width });
+    console.log(this.state.width);
   }
   render() {
     return (
@@ -29,7 +31,7 @@ class LandingPage extends Component {
             <p style={{fontSize: '0.75rem', color: 'grey'}}>one moment</p>
           </HeadText>
           <Button>
-            <span> Signup / Login</span>
+            <NavLink to="/sign"> Signup / Login</NavLink>
           </Button>
         </ButtonContainer>
         
@@ -39,9 +41,9 @@ class LandingPage extends Component {
 
         <ButtonContainer>
           <BigButton>
-            <span>
+            <NavLink to="/sign">
               And so much more ... Click!
-            </span>
+            </NavLink>
           </BigButton>
         </ButtonContainer>
 
