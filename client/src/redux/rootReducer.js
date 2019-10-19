@@ -8,6 +8,7 @@ import storage from 'redux-persist/lib/storage';
 
 //
 import userReducer from './user/userReducer';
+import listReducer from './list/listReducer';
 
 //
 const persistConfig = {
@@ -19,6 +20,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   user: userReducer,
+  // list: listReducer
 })
 
 export default persistReducer(persistConfig, rootReducer);

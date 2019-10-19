@@ -8,21 +8,17 @@ import {
   HeadText
 } from './LandingPage.style';
 //
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import TablePrice from '../../components/TablePrice/TablePrice';
 
-class LandingPage extends Component {
-  state = {
-    width: null
-  }
-  onWidth = () => {
-    const width = window.innerWidth;
-    this.setState({ width : width });
-    console.log(this.state.width);
-  }
-  render() {
-    return (
+import React from 'react'
+
+const LandingPage = () => {
+  const dispatch = useDispatch();
+  const addTodo = (todo) => dispatch(addTodoAction(todo))
+  return (
       <LandingPageContainer>
 
         <ButtonContainer>
@@ -49,7 +45,7 @@ class LandingPage extends Component {
 
       </LandingPageContainer>
     );
-  }
 }
+
 
 export default LandingPage;
