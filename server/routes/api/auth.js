@@ -46,20 +46,9 @@ module.exports = app => {
         })
       })
     } catch (error) {
-      console.log(error);
+      return res.status(404).json({ msg: 'error come by something weird!' });
     }
-    
   });
-
-  // user login
-  app.post('/api/login', async (req, res) => {
-    const {
-      username,
-      email,
-      password
-    } = req.body;
-
-  })
 
   // fetch user 
   app.get('/api/user', async (req,res) => {

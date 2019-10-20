@@ -24,7 +24,7 @@ const userSchema = new Schema({
     required: true,
     trim: true,
     validate: (value) => {
-      return validator.isLength(value, { min : 3 , max: undefined});
+      return validator.isLength(value, { min : 6 , max: undefined});
     }
   }
 });
