@@ -31,9 +31,7 @@ app.use(bodyParser.urlencoded({
 // ------------------- Routes ---------------------------
 
 // sign / login / fetchUser - routes
-require('./routes/api/user/register')(app);
-require('./routes/api/user/login')(app);
-require('./routes/api/user/fetchUser')(app);
+require('./routes/api/user')(app);
 
 // lists - routes
 
