@@ -7,13 +7,13 @@ import {
   BigButton,
   HeadText
 } from './LandingPage.style';
-//
+// recat and other modules.
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+// files.
 import TablePrice from '../../components/TablePrice/TablePrice';
 
-import React from 'react'
 
 const LandingPage = () => {
   const dispatch = useDispatch();

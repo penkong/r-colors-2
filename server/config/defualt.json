@@ -1,22 +1,4 @@
 {
-  "gas": {
-    "prefix": "dbo",
-    "cn": {
-      "dbName": "DbEstate",
-      "user": "sa",
-      "password": "1",
-      "host": "192.168.100.188"
-    },
-    "providerType": "mssql"
-  },
-  "water": {
-    "prefix": "safa_ci",
-    "cn": {
-      "dbName": "NGO_Iran",
-      "user": "postgres",
-      "password": "1",
-      "host": "192.168.100.188"
-    },
-    "providerType": "postgres"
-  }
+  "mongoURI": "mongodb://127.0.0.1:27017/bd",
+  "jwtSecret": "sl_myJwtSecret"
 }

@@ -1,8 +1,10 @@
-//
+// style
 import './styled/scss/App.scss';
+// react and other modules.
 import React, { lazy, Suspense , useEffect } from "react";
 import { Switch, Route , Redirect  } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+import { fetchUser } from './redux/user/userAction';
 // Redirect from react-router-dom
 import Header from "./components/layouts/Header/Header";
 import Spinner from "./components/Spinner/Spinner";
@@ -14,9 +16,7 @@ const DashBoard = lazy(() => import('./pages/DashBoard/DashBoard'));
 //
 const App = () => {
   const token = useSelector(state => state.token); 
-  useEffect(() => {
-    useDispatch(() => fetchUser());
-  }, [token])
+  useDispatch(() => fetchUser()); 
   return (
     <div>
       <Header/>

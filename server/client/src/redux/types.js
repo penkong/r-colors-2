@@ -8,6 +8,7 @@ export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS';
 export const SIGN_IN_FAILURE = 'SIGN_IN_FAILURE';
 
 export const FETCH_USER = 'FETCH_USER';
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
 
 export const ADD_ITEM = 'ADD_ITEM';
 export const REMOVE_ITEM = 'REMOVE_ITEM';

@@ -1,13 +1,15 @@
-//
+// style.
+import './styled/scss/abstract/_mixins.scss';
 import './styled/scss/index.scss';
-//
+// base react modules.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+// store and persist store.
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-//
 import { store, persistor } from './redux/store';
+// files.
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
