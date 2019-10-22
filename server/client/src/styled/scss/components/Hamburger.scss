@@ -99,12 +99,15 @@ $lightColor: '#c6cbef';
 
     //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
-        transform: scale(20);
+        transform: scale(25);
         @media screen and (min-width: 575px){
             transform: scale(30);
         }
         @media screen and (min-width: 767px){
             transform: scale(40);
+        }
+        @media screen and (min-width: 1199px){
+            transform: scale(70);
         }
     }
 

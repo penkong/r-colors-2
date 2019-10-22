@@ -7,7 +7,7 @@ import {
   BigButton,
   HeadText
 } from './LandingPage.style';
-// recat and other modules.
+// react and other modules.
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -17,7 +17,7 @@ import TablePrice from '../../components/TablePrice/TablePrice';
 
 const LandingPage = () => {
   const dispatch = useDispatch();
-  const addTodo = (todo) => dispatch(addTodoAction(todo))
+  // const addTodo = (todo) => dispatch(addTodoAction(todo))
   return (
       <LandingPageContainer>
 

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER , SET_CURRENT_USER } from './types';
+import { FETCH_USER , SET_CURRENT_USER } from '../types';
 
 
 export const signupUser = formProps => async dispatch => {

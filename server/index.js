@@ -9,7 +9,11 @@ const keys = require('./config/keys')
 
 // ------------------- register DB ---------------------
 mongoose
-  .connect(keys.mongoURI, { useNewUrlParser: true , useUnifiedTopology: true })
+  .connect(keys.mongoURI, { 
+    useNewUrlParser: true , 
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  })
   .then(() => console.log('mongo connected!'))
   .catch(err => console.log(err));
 
@@ -26,8 +30,13 @@ app.use(bodyParser.urlencoded({
 
 // ------------------- Routes ---------------------------
 
-// sign / login -routes
-require('./routes/api/auth')(app);
+// sign / login / fetchUser - routes
+require('./routes/api/user/register')(app);
+require('./routes/api/user/login')(app);
+require('./routes/api/user/fetchUser')(app);
+
+// lists - routes
+
 
 // ------------------- Routes prod -----------------------
 //route for let react-router make decision
