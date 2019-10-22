@@ -8,7 +8,8 @@ import storage from 'redux-persist/lib/storage';
 
 //
 import userReducer from './user/userReducer';
-import listReducer from './list/listReducer';
+// import listReducer from './list/listReducer';
+import errorReducer from './error/errorReducer';
 
 //
 const persistConfig = {
@@ -20,6 +21,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   user: userReducer,
+  error: errorReducer
   // list: listReducer
 })
 
