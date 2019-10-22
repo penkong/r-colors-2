@@ -1,28 +1,28 @@
-import { FETCH_USER, SET_CURRENT_USER } from '../types';
+// import { FETCH_USER, SET_CURRENT_USER } from '../types';
 
-const INITIAL_STATE = {
-  currentUser: null,
-  token: null
-};
+// const INITIAL_STATE = {
+//   currentUser: null,
+//   token: null
+// };
 
-const userReducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case FETCH_USER:
-      return {
-        ...state,
-        token: action.payload
-      };
-    case SET_CURRENT_USER:
-      return {
-        ...state,
-        currentUser: action.payload
-      };
-    default:
-      return state;
-  }
-};
+// const userReducer = (state = INITIAL_STATE, action) => {
+//   switch (action.type) {
+//     case FETCH_USER:
+//       return {
+//         ...state,
+//         token: action.payload
+//       };
+//     case SET_CURRENT_USER:
+//       return {
+//         ...state,
+//         currentUser: action.payload
+//       };
+//     default:
+//       return state;
+//   }
+// };
 
-export default userReducer;
+// export default userReducer;
 
 import {
   USER_LOADED,
@@ -36,7 +36,7 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  token: localStorage.getItem('token'),
+  token: localStorage.getItem('token') || '',
   isAuthenticated: null,
   isLoading: false,
   user: null
@@ -44,27 +44,31 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
+
     case USER_LOADING:
       return {
         ...state,
         isLoading: true
       };
+
     case USER_LOADED:
       return {
         ...state,
         isAuthenticated: true,
-          isLoading: false,
-          user: action.payload
+        isLoading: false,
+        user: action.payload
       };
+
     case LOGIN_SUCCESS:
     case REGISTER_SUCCESS:
       localStorage.setItem('token', action.payload.token);
       return {
         ...state,
         ...action.payload,
-          isAuthenticated: true,
-          isLoading: false
+        isAuthenticated: true,
+        isLoading: false
       };
+
     case AUTH_ERROR:
     case LOGIN_FAIL:
     case LOGOUT_SUCCESS:
@@ -73,10 +77,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         token: null,
-          user: null,
-          isAuthenticated: false,
-          isLoading: false
+        user: null,
+        isAuthenticated: false,
+        isLoading: false
       };
+
     default:
       return state;
   }
