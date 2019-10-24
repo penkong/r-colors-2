@@ -15,7 +15,7 @@ const SignPage = lazy(() => import('./pages/SignPage/SignPage'))
 const DashBoard = lazy(() => import('./pages/DashBoard/DashBoard'))
 //
 const App = () => {
-  const token = useSelector((state) => state.token)
+  const token = useSelector(state => state.token)
   // useDispatch(() => fetchUser())
   return (
     <div>
@@ -23,29 +23,19 @@ const App = () => {
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
-            <Route exact path="/" component={LandingPage} />{' '}
+            <Route exact path="/" component={LandingPage} />
             <Route
               exact
               path="/sign"
               render={() => (token ? <Redirect to="/dashboard" /> : <SignPage />)}
-            />{' '}
-            <Route exact path="/dashboard" component={DashBoard} />{' '}
-          </Suspense>{' '}
-        </ErrorBoundary>{' '}
-      </Switch>{' '}
+            />
+            <Route exact path="/dashboard" component={DashBoard} />
+          </Suspense>
+        </ErrorBoundary>
+      </Switch>
     </div>
   )
 }
 export default App
 
 // export SASS_BINARY_PATH="C:\Users\mkz\win32-x64-72_binding.node"
-
-// {
-//   /* <Route exact path="/signin"
-//                 render={()=>
-//                   currentUser
-//                   ? (<Redirect to='/'/>)
-//                   : (<SignPage/>)
-//                 }
-//               /> */
-// }
