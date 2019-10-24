@@ -1,33 +1,32 @@
-export const SIGN_UP_START = 'SIGN_UP_START';
-export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS';
-export const SIGN_UP_FAILURE = 'SIGN_UP_FAILURE';
+export const SIGN_UP_START = 'SIGN_UP_START'
+export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS'
+export const SIGN_UP_FAILURE = 'SIGN_UP_FAILURE'
 
-export const GOOGLE_SIGN_IN_START = 'GOOGLE_SIGN_IN_START';
-export const EMAIL_SIGN_IN_START = 'EMAIL_SIGN_IN_START';
-export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS';
-export const SIGN_IN_FAILURE = 'SIGN_IN_FAILURE';
+export const GOOGLE_SIGN_IN_START = 'GOOGLE_SIGN_IN_START'
+export const EMAIL_SIGN_IN_START = 'EMAIL_SIGN_IN_START'
+export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS'
+export const SIGN_IN_FAILURE = 'SIGN_IN_FAILURE'
 
-export const FETCH_USER = 'FETCH_USER';
-export const SET_CURRENT_USER = 'SET_CURRENT_USER';
+export const FETCH_USER = 'FETCH_USER'
+export const SET_CURRENT_USER = 'SET_CURRENT_USER'
 
-export const ADD_ITEM = 'ADD_ITEM';
-export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const ADD_ITEM = 'ADD_ITEM'
+export const REMOVE_ITEM = 'REMOVE_ITEM'
 
-export const SIGN_OUT_START = 'SIGN_OUT_START';
-export const SIGN_OUT_SUCCESS = 'SIGN_OUT_SUCCESS';
-export const SIGN_OUT_FAILURE = 'SIGN_OUT_FAILURE';
+export const SIGN_OUT_START = 'SIGN_OUT_START'
+export const SIGN_OUT_SUCCESS = 'SIGN_OUT_SUCCESS'
+export const SIGN_OUT_FAILURE = 'SIGN_OUT_FAILURE'
 
-export const GET_ITEMS = 'GET_ITEMS';
-export const ADD_ITEM = 'ADD_ITEM';
-export const DELETE_ITEM = 'DELETE_ITEM';
-export const ITEMS_LOADING = 'ITEMS_LOADING';
-export const USER_LOADING = "USER_LOADING";
-export const USER_LOADED = "USER_LOADED";
-export const AUTH_ERROR = "AUTH_ERROR";
-export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
-export const LOGIN_FAIL = "LOGIN_FAIL";
-export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
-export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
-export const REGISTER_FAIL = "REGISTER_FAIL";
-export const GET_ERRORS = 'GET_ERRORS';
-export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const GET_ITEMS = 'GET_ITEMS'
+export const DELETE_ITEM = 'DELETE_ITEM'
+export const ITEMS_LOADING = 'ITEMS_LOADING'
+export const USER_LOADING = 'USER_LOADING'
+export const USER_LOADED = 'USER_LOADED'
+export const AUTH_ERROR = 'AUTH_ERROR'
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const LOGIN_FAIL = 'LOGIN_FAIL'
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS'
+export const REGISTER_FAIL = 'REGISTER_FAIL'
+export const GET_ERRORS = 'GET_ERRORS'
+export const CLEAR_ERRORS = 'CLEAR_ERRORS'
