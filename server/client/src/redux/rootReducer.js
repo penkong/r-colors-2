@@ -5,24 +5,23 @@ import { persistReducer } from 'redux-persist';
 // its local storage
 import storage from 'redux-persist/lib/storage';
 
-
 //
-import userReducer from './user/userReducer';
+import userReducer from './userAuth/userReducer';
 // import listReducer from './list/listReducer';
 import errorReducer from './error/errorReducer';
 
 //
 const persistConfig = {
   key: 'root',
-  storage,
+  storage
   // we persist  reducer
   // whitelist: ['']
-}
+};
 
 const rootReducer = combineReducers({
-  user: userReducer,
+  userAuth: userReducer,
   error: errorReducer
   // list: listReducer
-})
+});
 
 export default persistReducer(persistConfig, rootReducer);

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { returnErrors } from './errorActions';
+import { returnErrors } from '../error/errorActions';
 
 import {
   USER_LOADED,
@@ -16,9 +16,9 @@ const url = process.env.server;
 
 //----------------------------------------------------------------------
 // Setup config/headers and token
-export const generateTokenConfig = getState => {
+export const getTokenConfig = getState => {
   // Get token from localstorage
-  const token = getState().user.token;
+  const token = getState().userAuth.token;
 
   // Headers
   const config = {
@@ -42,7 +42,7 @@ export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
   axios
-    .get(`${url}/api/auth/user`, generateTokenConfig(getState))
+    .get(`${url}/api/auth/user`, getTokenConfig(getState))
     .then(res =>
       dispatch({
         type: USER_LOADED,

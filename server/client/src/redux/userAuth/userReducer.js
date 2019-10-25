@@ -1,29 +1,3 @@
-// import { FETCH_USER, SET_CURRENT_USER } from '../types';
-
-// const INITIAL_STATE = {
-//   currentUser: null,
-//   token: null
-// };
-
-// const userReducer = (state = INITIAL_STATE, action) => {
-//   switch (action.type) {
-//     case FETCH_USER:
-//       return {
-//         ...state,
-//         token: action.payload
-//       };
-//     case SET_CURRENT_USER:
-//       return {
-//         ...state,
-//         currentUser: action.payload
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
-// export default userReducer;
-
 import {
   USER_LOADED,
   USER_LOADING,
@@ -33,14 +7,14 @@ import {
   LOGOUT_SUCCESS,
   REGISTER_SUCCESS,
   REGISTER_FAIL
-} from '../types'
+} from '../types';
 
 const initialState = {
   token: localStorage.getItem('token') || '',
   isAuthenticated: null,
   isLoading: false,
   user: null
-}
+};
 
 export default function(state = initialState, action) {
   switch (action.type) {
@@ -48,7 +22,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         isLoading: true
-      }
+      };
 
     case USER_LOADED:
       return {
@@ -56,32 +30,32 @@ export default function(state = initialState, action) {
         isAuthenticated: true,
         isLoading: false,
         user: action.payload
-      }
+      };
 
     case LOGIN_SUCCESS:
     case REGISTER_SUCCESS:
-      localStorage.setItem('token', action.payload.token)
+      localStorage.setItem('token', action.payload.token);
       return {
         ...state,
         ...action.payload,
         isAuthenticated: true,
         isLoading: false
-      }
+      };
 
     case AUTH_ERROR:
     case LOGIN_FAIL:
     case LOGOUT_SUCCESS:
     case REGISTER_FAIL:
-      localStorage.removeItem('token')
+      localStorage.removeItem('token');
       return {
         ...state,
         token: null,
         user: null,
         isAuthenticated: false,
         isLoading: false
-      }
+      };
 
     default:
-      return state
+      return state;
   }
 }

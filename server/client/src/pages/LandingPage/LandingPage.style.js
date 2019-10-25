@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
-import responsive from '../../styled/styled-comps/responsive'
-import { centerOf, flexRow, flexCol } from '../../styled/styled-comps/mixin'
+import styled from 'styled-components';
+import responsive from '../../styled/styled-comps/responsive';
+import { centerOf, flexRow, flexCol } from '../../styled/styled-comps/mixin';
 import {
   orangeButton,
   hoverButton,
@@ -8,7 +8,7 @@ import {
   coolBlueHover,
   mainBgColor,
   coolGreen
-} from '../../styled/styled-comps/constants'
+} from '../../styled/styled-comps/constants';
 
 export const LandingPageContainer = styled.div`
   min-height: calc(100vh - 4.5rem);
@@ -22,13 +22,13 @@ export const LandingPageContainer = styled.div`
   background-size: cover;
   margin: 0 auto;
   position: relative;
-`
+`;
 
 export const ButtonContainer = styled.div`
   width: 90%;
   ${flexRow}
   margin: 0 auto;
-`
+`;
 
 export const HeadText = styled.div`
   &:first-child {
@@ -38,7 +38,7 @@ export const HeadText = styled.div`
   ${flexCol}
   font-size: 0.6rem;
   color: grey;
-`
+`;
 
 export const Button = styled.button`
   width: 9rem;
@@ -82,7 +82,7 @@ export const Button = styled.button`
     background-color: orange;
     transform: scale(0.98);
   }
-`
+`;
 
 export const TextBoxContainer = styled.div`
   width: 90%;
@@ -91,7 +91,7 @@ export const TextBoxContainer = styled.div`
   margin: 0.5rem auto 0rem;
   border: none;
   border-radius: 4px;
-`
+`;
 
 export const BigButton = styled.button`
   width: 100%;
@@ -121,4 +121,4 @@ export const BigButton = styled.button`
   :active {
     transform: scale(0.98);
   }
-`
+`;
