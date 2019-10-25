@@ -12,8 +12,6 @@ import {
   REGISTER_FAIL
 } from '../types';
 
-const url = process.env.server;
-
 //----------------------------------------------------------------------
 // Setup config/headers and token
 export const getTokenConfig = getState => {
@@ -42,7 +40,7 @@ export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
   axios
-    .get(`${url}/api/auth/user`, getTokenConfig(getState))
+    .get('/api/auth/user', getTokenConfig(getState))
     .then(res =>
       dispatch({
         type: USER_LOADED,
@@ -70,7 +68,7 @@ export const register = ({ username, email, password }) => dispatch => {
   const body = JSON.stringify({ username, email, password });
 
   axios
-    .post(`${url}/api/signup`, body, config)
+    .post('/api/auth/signup', body, config)
     .then(res =>
       dispatch({
         type: REGISTER_SUCCESS,
@@ -100,7 +98,7 @@ export const login = ({ email, password }) => dispatch => {
   const body = JSON.stringify({ email, password });
 
   axios
-    .post(`${url}/api/login`, body, config)
+    .post('/api/login', body, config)
     .then(res =>
       dispatch({
         type: LOGIN_SUCCESS,
